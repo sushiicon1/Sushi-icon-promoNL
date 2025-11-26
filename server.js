@@ -541,7 +541,7 @@ async function sendBirthdayEmailToCustomer(customer) {
 const allowedOrigins = [
   'https://sushi-icon-promonl.onrender.com', // Ваш рабочий сайт
   'https://www.sushi-icon-promonl.onrender.com',
-
+  'https://sushi-icon-promonl-bxvu.onrender.com',
   // --- Адреса для ЛОКАЛЬНОЙ разработки ---
   'http://127.0.0.1:8000', // <-- Ваш фронтенд Vite
   'http://localhost:8000'  // <-- Альтернативный адрес для Vite
