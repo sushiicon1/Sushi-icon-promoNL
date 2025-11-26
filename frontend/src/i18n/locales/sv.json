@@ -1,0 +1,538 @@
+{
+  "app": {
+    "title": "SUSHI ICON — Lojalitetsprogram",
+    "subtitle": "Få 10% rabatt på din nästa beställning genom att fylla i formuläret.",
+    "discountLabel": "rabatt"
+  },
+  "tabs": {
+    "registration": "Gästformulär",
+    "owner": "Administratörspanel",
+    "admin": "Admin-panel"
+  },
+  "discountBadge": {
+    "title": "10% rabatt",
+    "subtitle": "för varje ny registrering"
+  },
+  "languages": {
+    "switcherLabel": "Språk",
+    "switchLanguage": "Byt språk",
+    "searchPlaceholder": "Sök språk...",
+    "found": "Hittades: {{count}}",
+    "allLanguages": "Alla språk ({{count}})",
+    "en": "Engelska",
+    "de": "Tyska",
+    "nl": "Holländska",
+    "da": "Danska",
+    "pl": "Polska",
+    "ru": "Ryska",
+    "fr": "Franska",
+    "es": "Spanska",
+    "it": "Italienska",
+    "pt": "Portugisiska",
+    "sv": "Svenska",
+    "no": "Norska",
+    "fi": "Finska",
+    "cs": "Tjeckiska",
+    "hu": "Ungerska",
+    "el": "Grekiska",
+    "uk": "Ukrainska",
+    "bg": "Bulgariska",
+    "ro": "Rumänska",
+    "hr": "Kroatiska",
+    "sk": "Slovakiska",
+    "sl": "Slovenska"
+  },
+  "registration": {
+    "cardTitle": "Fyll i dina uppgifter och få en rabatt",
+    "fields": {
+      "firstName": "Förnamn",
+      "lastName": "Efternamn",
+      "phone": "Telefon",
+      "country": "Land",
+      "email": "Email",
+      "birthDate": "Födelsedatum",
+      "city": "Stad",
+      "preferredFood": "Favoritrullar eller önskemål",
+      "feedback": "Dina önskemål för oss",
+      "street": "Gata",
+      "postalCode": "Postnummer",
+      "marketingConsent": "Jag godkänner att ta emot marknadsföringserbjudanden och uppdateringar."
+    },
+    "placeholders": {
+      "firstName": "t.ex. Anna",
+      "lastName": "t.ex. Andersson",
+      "phone": "Ange telefonnummer",
+      "country": "Välj land",
+      "email": "exempel@mail.com",
+      "birthDate": "",
+      "city": "t.ex. Amsterdam, Damrak 1, 1012 LP",
+      "preferredFood": "Berätta vad du älskar så vi kan anpassa erbjudanden",
+      "feedback": "Dela vad som ska läggas till eller förbättras",
+      "street": "t.ex. Damrak 1",
+      "postalCode": "t.ex. 1012 LP"
+    },
+    "hints": {
+      "phone": "Välj ditt land och ange det fullständiga mobilnumret för SMS.",
+      "feedback": "Vi läser varje meddelande för att förbättra din upplevelse."
+    },
+    "actions": {
+      "reset": "Återställ",
+      "submit": "Få rabatt",
+      "submitting": "Skickar..."
+    },
+    "status": {
+      "duplicate": "Du är redan registrerad.",
+      "success": "Tack för registreringen! Din 10% rabatt är redo.",
+      "error": "Något gick fel. Försök igen."
+    },
+    "errors": {
+      "phoneInvalid": "Ogiltigt telefonnummerformat",
+      "phoneTooShort": "Vänligen ange ett komplett telefonnummer"
+    },
+    "success": {
+      "phoneValid": "✓ Telefonnummer är giltigt",
+      "discountCode": "Your promo code: {{code}}"
+    },
+    "datePicker": {
+      "placeholder": "Välj datum",
+      "selected": "Valt",
+      "day": "Dag",
+      "month": "Månad",
+      "year": "År",
+      "today": "I dag",
+      "unavailable": "Ej tillgänglig",
+      "previousMonth": "Föregående månad",
+      "nextMonth": "Nästa månad",
+      "selectYearMonth": "Välj år/månad",
+      "close": "Stäng",
+      "selectMonthFor": "Välj månad för {{year}}",
+      "months": {
+        "january": "Januari",
+        "february": "Februari",
+        "march": "Mars",
+        "april": "April",
+        "may": "Maj",
+        "june": "Juni",
+        "july": "Juli",
+        "august": "Augusti",
+        "september": "September",
+        "october": "Oktober",
+        "november": "November",
+        "december": "December"
+      },
+      "weekdays": {
+        "monday": {
+          "short": "Må",
+          "full": "Måndag"
+        },
+        "tuesday": {
+          "short": "Ti",
+          "full": "Tisdag"
+        },
+        "wednesday": {
+          "short": "On",
+          "full": "Onsdag"
+        },
+        "thursday": {
+          "short": "To",
+          "full": "Torsdag"
+        },
+        "friday": {
+          "short": "Fr",
+          "full": "Fredag"
+        },
+        "saturday": {
+          "short": "Lö",
+          "full": "Lördag"
+        },
+        "sunday": {
+          "short": "Sö",
+          "full": "Söndag"
+        }
+      },
+      "previousYears": "Föregående {{count}} år",
+      "nextYears": "Nästa {{count}} år",
+      "backToYears": "Tillbaka till år",
+      "backToMonths": "Tillbaka till månader"
+    },
+    "sections": {
+      "address": "Adressinformation"
+    },
+    "validation": {
+      "firstName": {
+        "required": "Please enter your first name",
+        "lettersOnly": "Invalid first name: letters only"
+      },
+      "lastName": {
+        "required": "Please enter your last name",
+        "lettersOnly": "Invalid last name: letters only"
+      },
+      "country": {
+        "required": "Please choose a country"
+      },
+      "phone": {
+        "invalid": "Invalid phone number format",
+        "length": "Invalid phone number: check the number of digits"
+      },
+      "email": {
+        "invalid": "Please enter a valid email address"
+      },
+      "postalCode": {
+        "format": "Postnummeret måste vara 1234 AB (4 siffror och 2 bokstäver åtskilda av ett mellanslag)"
+      },
+      "street": {
+        "required": "Vänligen ange en gata"
+      },
+      "city": {
+        "required": "Vänligen ange en stad"
+      },
+      "houseNumber": {
+        "required": "Vänligen ange ett husnummer"
+      },
+      "invalidCode": "Invalid verification code. Please try again."
+    },
+    "alreadyRegistered": "You are already registered.",
+    "error": {
+      "serverError": "Server error. Please try again.",
+      "networkTitle": "Network error",
+      "networkDetails": "Please check your internet connection and try again."
+    },
+    "verify": {
+      "title": "E-postverifiering",
+      "instructions": "Vi har skickat en verifieringskod till {{email}}. Vänligen ange den nedan.",
+      "codeLabel": "Verifieringskod",
+      "submitButton": "Verifiera",
+      "cancelButton": "Avbryt"
+    }
+  },
+  "owner": {
+    "title": "Administratörspanel",
+    "auth": {
+      "title": "Administratörspanel",
+      "fields": {
+        "email": "E-post",
+        "accessCode": "Åtkomstkod",
+        "password": "Lösenord"
+      },
+      "placeholders": {
+        "email": "your-email@gmail.com",
+        "accessCode": "Ange din åtkomstkod",
+        "password": "Ange ditt lösenord"
+      },
+      "actions": {
+        "login": "Logga in på panelen",
+        "logging": "Loggar in..."
+      },
+      "welcome": "Välkommen, {{name}}!",
+      "logout": "Logga ut"
+    },
+    "unauthorized": {
+      "title": "Åtkomst nekad",
+      "message": "Du kan inte komma åt denna sida. Endast administratörer kan komma in här.",
+      "subtitle": "Administratörspanelen är endast tillgänglig för auktoriserade användare.",
+      "backToForm": "Tillbaka till gästformuläret"
+    },
+    "token": {
+      "label": "Ange den hemliga token för att hantera sändningar",
+      "placeholder": "Ägare token",
+      "saved": "Token sparad.",
+      "cleared": "Token rensad.",
+      "actions": {
+        "reset": "Återställ",
+        "save": "Spara token"
+      }
+    },
+    "broadcast": {
+      "title": "Skapa Messenger-sändning",
+      "fields": {
+        "title": "Titel",
+        "body": "Meddelandetext"
+      },
+      "placeholder": {
+        "title": "t.ex. Het Rull Weekend",
+        "body": "Meddelande som skickas till alla kunder"
+      },
+      "hint": "Meddelandet skickas till alla som fyllde i formuläret.",
+      "actions": {
+        "reset": "Återställ",
+        "submit": "Skicka sändning",
+        "submitting": "Skickar..."
+      }
+    },
+    "customers": {
+      "title": "Kunder",
+      "empty": "Inga registreringar än eller ogiltig token.",
+      "refresh": "Uppdatera",
+      "refreshing": "Uppdaterar...",
+      "columns": {
+        "name": "Namn",
+        "contacts": "Kontakter",
+        "country": "Land",
+        "city": "Stad",
+        "code": "Promokod",
+        "createdAt": "Registrerad"
+      }
+    }
+  },
+  "sushi": {
+    "animation": {
+      "sushi": "Sushi",
+      "fresh": "Fräsch",
+      "delicious": "Läckert",
+      "premium": "Premium",
+      "traditional": "Traditionell",
+      "loyaltyProgram": "Lojalitetsprogram",
+      "sushiIcon": "SUSHI ICON"
+    }
+  },
+  "admin": {
+    "title": "Admin Panel",
+    "sync": {
+      "autoSync": "🔄 Auto-sync",
+      "syncStopped": "⏸️ Sync stopped",
+      "syncNow": "🔄 Sync now",
+      "lastSync": "Last sync: {{time}}",
+      "error": "Error loading data: {{error}}"
+    },
+    "stats": {
+      "customers": "Customers",
+      "sessions": "Sessions",
+      "successful": "Successful",
+      "failed": "Failed",
+      "synced": "Synced"
+    },
+    "filters": {
+      "search": "🔍 Search all data...",
+      "allCountries": "All countries",
+      "allStatuses": "All statuses",
+      "successful": "Successful",
+      "failed": "Failed",
+      "clearFilters": "🗑️ Clear filters"
+    },
+    "tabs": {
+      "customers": "👥 Customers ({{filtered}}/{{total}})",
+      "sessions": "🔐 Login sessions ({{filtered}}/{{total}})",
+      "device": "📱 Current device",
+      "broadcast": "📢 Broadcast",
+      "synced": "🔄 Synced data ({{filtered}}/{{total}})"
+    },
+    "customers": {
+      "title": "Customer list",
+      "exportCsv": "📊 Export CSV",
+      "exportJson": "📄 Export JSON",
+      "table": {
+        "id": "ID",
+        "name": "Name",
+        "phone": "Phone",
+        "email": "Email",
+        "country": "Country",
+        "city": "City",
+        "address": "Address",
+        "birthDate": "Birth date",
+        "preferences": "Preferences",
+        "feedback": "Feedback",
+        "promoCode": "Promo code",
+        "registrationDate": "Registration date"
+      }
+    },
+    "sessions": {
+      "title": "Login history",
+      "table": {
+        "loginTime": "Login time",
+        "status": "Status",
+        "ipAddress": "IP address",
+        "location": "Location",
+        "browser": "Browser",
+        "os": "OS",
+        "device": "Device",
+        "timezone": "Timezone",
+        "isp": "ISP",
+        "details": "Details"
+      },
+      "status": {
+        "successful": "Successful",
+        "failed": "Failed"
+      },
+      "details": {
+        "title": "Details",
+        "region": "Region",
+        "countryCode": "Country code",
+        "postal": "Postal code",
+        "currency": "Currency",
+        "languages": "Languages",
+        "population": "Country population",
+        "capital": "Capital",
+        "continent": "Continent",
+        "eu": "EU",
+        "callingCode": "Calling code",
+        "utcOffset": "UTC offset",
+        "yes": "Yes",
+        "no": "No"
+      }
+    },
+    "device": {
+      "title": "Current connection information",
+      "location": {
+        "title": "🌍 Location",
+        "country": "Country",
+        "city": "City",
+        "region": "Region",
+        "address": "Address",
+        "ip": "IP",
+        "isp": "ISP",
+        "coordinates": "Coordinates"
+      },
+      "device": {
+        "title": "💻 Device",
+        "type": "Type",
+        "model": "Model",
+        "browser": "Browser",
+        "os": "OS"
+      },
+      "network": {
+        "title": "🌐 Network and time",
+        "timezone": "Timezone",
+        "utcOffset": "UTC offset",
+        "countryCode": "Country code",
+        "regionCode": "Region code",
+        "postal": "Postal code"
+      },
+      "economy": {
+        "title": "💰 Economy",
+        "currency": "Currency",
+        "languages": "Languages",
+        "population": "Population",
+        "area": "Area",
+        "capital": "Capital",
+        "continent": "Continent",
+        "eu": "EU",
+        "callingCode": "Calling code"
+      }
+    },
+    "broadcast": {
+      "title": "Message broadcast",
+      "titleLabel": "Message title:",
+      "titlePlaceholder": "Enter title...",
+      "bodyLabel": "Message text:",
+      "bodyPlaceholder": "Enter message text...",
+      "sendButton": "📢 Send to all customers",
+      "sending": "Sending...",
+      "success": "Message sent successfully!",
+      "error": "Error sending message"
+    },
+    "synced": {
+      "title": "Synced form data",
+      "description": "Data that users fill in the form is automatically synced every second",
+      "noData": "No synced data",
+      "status": {
+        "draft": "Draft",
+        "completed": "Completed"
+      },
+      "fields": {
+        "phone": "Phone",
+        "email": "Email",
+        "country": "Country",
+        "city": "City",
+        "birthDate": "Birth date",
+        "preferredFood": "Preferred food",
+        "feedback": "Feedback"
+      }
+    },
+    "auth": {
+      "title": "🔐 Admin Panel Inloggning",
+      "subtitle": "Ange inloggningsuppgifter för att komma åt administrationspanelen",
+      "email": "Admin E-post",
+      "emailPlaceholder": "Ange admin e-post",
+      "accessCode": "Åtkomstkod",
+      "accessCodePlaceholder": "Ange åtkomstkod",
+      "password": "Lösenord",
+      "passwordPlaceholder": "Ange lösenord",
+      "login": "🚀 Logga in på Panel",
+      "loggingIn": "Loggar in...",
+      "invalidCredentials": "❌ Ogiltiga inloggningsuppgifter. Åtkomst nekad.",
+      "loginError": "❌ Inloggningsfel. Försök igen.",
+      "warning": "⚠️ Åtkomst är begränsad till endast auktoriserade administratörer",
+      "logout": "Logga ut",
+      "sessionExpired": "Sessionen har gått ut. Logga in igen."
+    },
+    "login": {
+      "title": "Administratörs inloggning",
+      "subtitle": "Ange dina inloggningsuppgifter",
+      "emailLabel": "E-post",
+      "emailPlaceholder": "Ange e-post",
+      "accessCodeLabel": "Åtkomstkod",
+      "accessCodePlaceholder": "Ange åtkomstkod",
+      "passwordLabel": "Lösenord",
+      "passwordPlaceholder": "Ange lösenord",
+      "nextButton": "Nästa",
+      "checking": "Kontrollerar...",
+      "verificationTitle": "Verifiering",
+      "verificationCodeLabel": "Verifieringskod",
+      "verificationCodeSent": "Inloggningsuppgifterna är korrekta. Koden har skickats till din e-post.",
+      "verifying": "Verifierar...",
+      "loginButton": "Logga in",
+      "backButton": "Tillbaka",
+      "warning": "Endast för auktoriserade administratörer",
+      "clearAuthButton": "Rensa autentisering (felsökning)",
+      "backToFormButton": "Tillbaka till formuläret",
+      "invalidVerificationCode": "Ogiltig verifieringskod. Vänligen försök igen."
+    }
+  },
+  "thankYou": {
+    "title": "Tack för registreringen, {{firstName}}!",
+    "welcomeMessage": "Välkommen till SUSHI ICON! Vi är glada att du har gått med i vår gemenskap av kvalitetssushiälskare.",
+    "promoCode": {
+      "title": "🎁 Din personliga rabattkod",
+      "copyButton": "Kopiera rabattkod",
+      "copied": "Kopierad!",
+      "description": "Använd denna kod för att få 10% rabatt!"
+    },
+    "instructions": {
+      "title": "📱 Hur får man rabatt:",
+      "step1": "Kopiera din rabattkod: {{code}}",
+      "step2": "Skriv till oss på Instagram med denna rabattkod",
+      "step3": "Få 10% rabatt på din beställning! 🍣"
+    },
+    "instagramButton": "Skriv på Instagram",
+    "shareMessage": "Hej! Jag registrerade mig hos SUSHI ICON och fick 10% rabatt! 🍣✨ Min rabattkod: {{code}}. Gå med oss! #SushiIcon #Rabatt10%",
+    "contact": {
+      "title": "📞 Kontakter",
+      "phone": "Telefon",
+      "email": "E-post",
+      "emailValue": "info@sushiicon.nl"
+    },
+    "address": {
+      "title": "📍 Adress",
+      "street": "Van Houten industriepark nummer 11 A, Weesp",
+      "country": "Nederländerna"
+    },
+    "closeButton": "Stäng"
+  },
+  "accessDenied": {
+    "title": "Åtkomst blockerad",
+    "message": "Denna sida är endast tillgänglig för administratörer",
+    "description": "Enligt åtkomstreglerna är åtkomst till denna sida endast tillåten för administratören.",
+    "backButton": "Tillbaka till formuläret"
+  },
+  "countrySelector": {
+    "searchTitle": "Sök efter land",
+    "searchPlaceholder": "Ange landsnamn eller kod...",
+    "foundCount": "{{count}} hittades",
+    "foundResults": "{{count}} länder hittades",
+    "foundResults_one": "{{count}} land hittades",
+    "foundResults_other": "{{count}} länder hittades",
+    "noResults": "Inga länder hittades",
+    "countryNotFound": "Land hittades inte",
+    "tryDifferentQuery": "Försök med en annan sökning"
+  },
+  "address": {
+    "postalCode": "Postnummer",
+    "postalCodePlaceholder": "1234 AB",
+    "street": "Gata",
+    "streetPlaceholder": "Gatunamn",
+    "city": "Stad",
+    "cityPlaceholder": "Stadsnamn",
+    "houseNumber": "Husnummer",
+    "houseNumberPlaceholder": "Husnummer"
+  }
+}

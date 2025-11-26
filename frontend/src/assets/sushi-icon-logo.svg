@@ -1,0 +1,57 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Белый фон круга -->
+  <circle cx="100" cy="100" r="100" fill="#ffffff"/>
+  
+  <!-- Динамичная тейл-синяя граница (эффект кисти/ряби с несколькими перекрывающимися линиями) -->
+  <g opacity="0.9">
+    <circle cx="100" cy="100" r="96" fill="none" stroke="#0ABAB5" stroke-width="2.2" opacity="1" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="97.5" fill="none" stroke="#0ABAB5" stroke-width="1.5" opacity="0.8" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="94.5" fill="none" stroke="#0ABAB5" stroke-width="2" opacity="0.85" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="98" fill="none" stroke="#0ABAB5" stroke-width="1.2" opacity="0.7" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="93" fill="none" stroke="#0ABAB5" stroke-width="1.8" opacity="0.75" stroke-linecap="round"/>
+    <!-- Неравномерные сегменты для эффекта кисти -->
+    <path d="M 100 4 A 96 96 0 0 1 180 40" fill="none" stroke="#0ABAB5" stroke-width="2.5" opacity="0.9" stroke-linecap="round"/>
+    <path d="M 180 40 A 96 96 0 0 1 196 100" fill="none" stroke="#0ABAB5" stroke-width="2" opacity="0.85" stroke-linecap="round"/>
+    <path d="M 196 100 A 96 96 0 0 1 180 160" fill="none" stroke="#0ABAB5" stroke-width="2.3" opacity="0.9" stroke-linecap="round"/>
+    <path d="M 180 160 A 96 96 0 0 1 100 196" fill="none" stroke="#0ABAB5" stroke-width="1.8" opacity="0.8" stroke-linecap="round"/>
+    <path d="M 100 196 A 96 96 0 0 1 20 160" fill="none" stroke="#0ABAB5" stroke-width="2.1" opacity="0.85" stroke-linecap="round"/>
+    <path d="M 20 160 A 96 96 0 0 1 4 100" fill="none" stroke="#0ABAB5" stroke-width="2.4" opacity="0.9" stroke-linecap="round"/>
+    <path d="M 4 100 A 96 96 0 0 1 20 40" fill="none" stroke="#0ABAB5" stroke-width="1.9" opacity="0.8" stroke-linecap="round"/>
+    <path d="M 20 40 A 96 96 0 0 1 100 4" fill="none" stroke="#0ABAB5" stroke-width="2.2" opacity="0.85" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Скелет рыбы -->
+  <g fill="none" stroke="#0ABAB5" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Голова рыбы (овал с X) -->
+    <ellipse cx="72" cy="58" rx="11" ry="7.5"/>
+    <line x1="67" y1="55" x2="77" y2="61" stroke-width="3"/>
+    <line x1="77" y1="55" x2="67" y2="61" stroke-width="3"/>
+    
+    <!-- Позвоночник (центральная горизонтальная линия) -->
+    <line x1="83" y1="58" x2="145" y2="58" stroke-width="3.5"/>
+    
+    <!-- Ребра (7-8 сегментов, неровной длины) -->
+    <line x1="90" y1="58" x2="90" y2="72" stroke-width="3"/>
+    <line x1="100" y1="58" x2="100" y2="75" stroke-width="3"/>
+    <line x1="110" y1="58" x2="110" y2="73" stroke-width="3"/>
+    <line x1="120" y1="58" x2="120" y2="76" stroke-width="3"/>
+    <line x1="130" y1="58" x2="130" y2="74" stroke-width="3"/>
+    <line x1="138" y1="58" x2="138" y2="72" stroke-width="3"/>
+    
+    <!-- Хвост (изогнутая форма плавника/сердца, обращенная вправо) -->
+    <path d="M 145 58 Q 155 53, 158 58 Q 155 63, 145 58" stroke-width="3.5"/>
+    <!-- Дополнительные линии хвоста для объема -->
+    <path d="M 145 58 Q 150 55, 152 58" stroke-width="2.5" opacity="0.7"/>
+    <path d="M 152 58 Q 155 56, 158 58" stroke-width="2.5" opacity="0.7"/>
+  </g>
+  
+  <!-- Основной текст "SUSHI ICON" (жирный, средний размер) -->
+  <text x="100" y="113" font-family="'Arial', 'Helvetica', sans-serif" font-size="20" font-weight="bold" fill="#0ABAB5" text-anchor="middle" letter-spacing="2">
+    SUSHI ICON
+  </text>
+  
+  <!-- Подзаголовок "THE SUSHI AND ROLLS" (маленький, обычный вес) -->
+  <text x="100" y="132" font-family="'Arial', 'Helvetica', sans-serif" font-size="8.5" font-weight="normal" fill="#0ABAB5" text-anchor="middle" letter-spacing="1">
+    THE SUSHI AND ROLLS
+  </text>
+</svg>

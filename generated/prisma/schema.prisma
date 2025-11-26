@@ -1,0 +1,229 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model FavoriteProduct {
+  id         Int      @id @default(autoincrement())
+  customerId String
+  productId  Int
+  createdAt  DateTime @default(now())
+
+  customer Customer @relation(fields: [customerId], references: [id], onDelete: Cascade)
+  product  Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([customerId, productId]) // Пользователь не может дважды добавить в избранное
+}
+
+model Product {
+  id       Int     @id @default(autoincrement())
+  price    Float
+  imageUrl String?
+
+  // Поля для 4-х языков
+  name_ru String
+  name_en String
+  name_uk String
+  name_nl String
+
+  ingredients_ru String?
+  ingredients_en String?
+  ingredients_uk String?
+  ingredients_nl String?
+
+  // Флаги для твоего нового меню
+  isPopular            Boolean @default(false)
+  isChefRecommendation Boolean @default(false)
+  isPromotion          Boolean @default(false)
+
+  categoryId Int
+  category   ProductCategory @relation(fields: [categoryId], references: [id])
+
+  // 👇 ВОТ РЕШЕНИЕ ДЛЯ ОШИБОК 1 и 2 👇
+  favoritedBy   FavoriteProduct[]
+  OrderLineItem OrderLineItem[]
+}
+
+model Customer {
+  id           String  @id @default(cuid())
+  telegramId   BigInt? @unique // <-- НОВОЕ: Для привязки к Telegram
+  languageCode String? @default("ru") // <-- НОВОЕ: Язык (ru, en, uk, nl)
+
+  firstName                String
+  lastName                 String
+  country                  String
+  phoneNumber              String               @unique
+  email                    String?              @unique
+  birthDate                DateTime?            @db.Date
+  city                     String?
+  street                   String?
+  postalCode               String?
+  houseNumber              String?
+  preferredFood            String?
+  feedback                 String?
+  discountCode             String               @unique
+  createdAt                DateTime             @default(now())
+  updatedAt                DateTime             @updatedAt
+  subscriptions            MessageSubscription?
+  isEmailVerified          Boolean              @default(false)
+  emailVerificationCode    String?
+  marketingConsent         Boolean              @default(false)
+  lastBirthdayGreetingSent DateTime?
+
+  // НОВЫЕ СВЯЗИ
+  favorites FavoriteProduct[] // <-- НОВОЕ: "Избранное"
+  orders    Order[] // <-- НОВОЕ: Для будущих заказов
+}
+
+model Order {
+  id         Int             @id @default(autoincrement())
+  customerId String
+  customer   Customer        @relation(fields: [customerId], references: [id])
+  totalPrice Float
+  status     String          @default("PENDING") // PENDING, CONFIRMED, DELIVERED
+  createdAt  DateTime        @default(now())
+  items      OrderLineItem[]
+}
+
+model OrderLineItem {
+  id        Int     @id @default(autoincrement())
+  orderId   Int
+  order     Order   @relation(fields: [orderId], references: [id])
+  productId Int
+  product   Product @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float // Цена на момент покупки
+}
+
+model Owner {
+  id                    String              @id @default(cuid())
+  email                 String              @unique
+  name                  String
+  accessCode            String              @unique
+  password              String
+  isActive              Boolean             @default(true)
+  lastLogin             DateTime?
+  createdAt             DateTime            @default(now())
+  updatedAt             DateTime            @updatedAt
+  emailVerificationCode String?
+  isEmailVerified       Boolean             @default(false)
+  loginSessions         OwnerLoginSession[]
+}
+
+model MessageSubscription {
+  id String @id @default(cuid())
+
+  // 👇 ВОТ РЕШЕНИЕ ДЛЯ ОШИБКИ 3 👇
+  customerId String @unique // Добавь @unique
+
+  subscribed Boolean           @default(true)
+  createdAt  DateTime          @default(now())
+  updatedAt  DateTime          @updatedAt
+  deliveries MessageDelivery[]
+  customer   Customer          @relation(fields: [customerId], references: [id], onDelete: Cascade)
+}
+
+model BroadcastMessage {
+  id           String            @id @default(cuid())
+  title        String
+  body         String
+  createdAt    DateTime          @default(now())
+  scheduledFor DateTime?
+  deliveries   MessageDelivery[]
+}
+
+model MessageDelivery {
+  id             String              @id @default(cuid())
+  messageId      String
+  subscriptionId String
+  phoneNumber    String
+  status         DeliveryStatus      @default(PENDING)
+  sentAt         DateTime?
+  errorMessage   String?
+  createdAt      DateTime            @default(now())
+  updatedAt      DateTime            @updatedAt
+  message        BroadcastMessage    @relation(fields: [messageId], references: [id])
+  subscription   MessageSubscription @relation(fields: [subscriptionId], references: [id])
+}
+
+model OwnerLoginSession {
+  id                String   @id @default(cuid())
+  ownerId           String
+  deviceInfo        String?
+  ipAddress         String?
+  location          String?
+  userAgent         String?
+  browser           String?
+  os                String?
+  device            String?
+  country           String?
+  city              String?
+  latitude          Float?
+  longitude         Float?
+  isSuccessful      Boolean  @default(true)
+  loginAt           DateTime @default(now())
+  timezone          String?
+  isp               String?
+  region            String?
+  deviceType        String?
+  deviceModel       String?
+  browserName       String?
+  browserVersion    String?
+  osName            String?
+  osVersion         String?
+  countryCode       String?
+  regionCode        String?
+  postal            String?
+  currency          String?
+  currencyName      String?
+  languages         String?
+  countryPopulation Int?
+  countryArea       Int?
+  countryCapital    String?
+  continent         String?
+  isEu              Boolean?
+  callingCode       String?
+  utcOffset         String?
+  owner             Owner    @relation(fields: [ownerId], references: [id])
+}
+
+model FormDraft {
+  id            String    @id @default(cuid())
+  firstName     String?
+  lastName      String?
+  phoneNumber   String?
+  email         String?
+  city          String?
+  street        String?
+  postalCode    String?
+  houseNumber   String?
+  country       String?
+  preferredFood String?
+  feedback      String?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  birthDate     DateTime?
+}
+
+enum DeliveryStatus {
+  PENDING
+  SENT
+  FAILED
+}
+
+model ProductCategory {
+  id Int @id @default(autoincrement())
+
+  // Поля для 4-х языков
+  name_ru String
+  name_en String
+  name_uk String
+  name_nl String
+
+  products Product[]
+}
