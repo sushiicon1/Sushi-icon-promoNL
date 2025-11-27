@@ -987,7 +987,7 @@ const ownerVerifySchema = z.object({
 
 // Жестко заданные данные администратора - максимально сложные для безопасности
 const ADMIN_CREDENTIALS = {
-  email: "sushi.icon.rolles.nl@gmail.com",
+  email: "sushiicon1@gmail.com",
   accessCode: "SUSHI-MASTER-2024-X9K7",
   password: "SushiMaster2024!@#$%^&*()_+{}|:<>?[];',./",
   name: "Главный администратор"
