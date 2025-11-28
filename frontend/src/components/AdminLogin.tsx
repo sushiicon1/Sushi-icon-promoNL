@@ -374,7 +374,7 @@ const AdminLogin: React.FC<AdminLoginProps> = ({ onLogin }) => {
                         color: '#ffffff',
                         opacity: 0.8,
                         textAlign: 'center',
-                        margin: '-8px 0 12px 0', // Скорректированы отступы
+                        margin: '8px 0 12px 0', // Скорректированы отступы
                         animation: 'fadeInUp 0.8s ease-out 0.5s both'
                       }}>
                         {t('admin.login.verificationSpamWarning', "P.S. Please check your spam folder!")}
